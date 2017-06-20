@@ -14,5 +14,24 @@ export class AppUserProvider {
   constructor(public http: Http) {
     console.log('Hello AppUserProvider Provider');
   }
-
+  
+baseUrl: string = "http://chrisssf-cloned-phortonssf.c9users.io:8080/api"
+path: string = "/AppUsers"
+register(newUserData) {
+    return this.http.post(
+      this.baseUrl + this.path,
+      newUserData
+    );
+  }
+login(storedUserData) {
+    return this.http.post(
+      this.baseUrl + this.path+"/login",
+      storedUserData
+    );
+  }
+  logout(token) {
+    return this.http.post(
+      this.baseUrl + this.path+'/logout'+'?access_token='+token,{}
+    );
+  }
 }

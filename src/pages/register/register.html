@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary" text-center>
     <ion-title>RegisterPage</ion-title>
   </ion-navbar>
 
@@ -14,5 +14,30 @@
 
 
 <ion-content padding>
-
+ <form #registerForm="ngForm" (ngSubmit)="signupForm(registerForm)" novalidate>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input name="email" type="email" placeholder="john@doe.com" [(ngModel)]="user.email" required></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label>First Name</ion-label>
+      <ion-input name="name" type="firstName" placeholder="John"[(ngModel)]="user.firstName" required></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label>LastName</ion-label>
+      <ion-input name="name" type="lastName" placeholder="Doe"[(ngModel)]="user.lastName"required></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label>Organization</ion-label>
+      <ion-input name="organization" type="organization" placeholder="SSF"[(ngModel)]="user.Organization"  required></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input name="psw" type="password" placeholder="Password"[(ngModel)]="user.password"  required></ion-input>
+    </ion-item>
+    <button ion-button type="submit" value="Submit" class="button-block" >
+      Register
+    </button>
+  </form>
+  
 </ion-content>
