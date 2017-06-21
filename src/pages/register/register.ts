@@ -15,7 +15,7 @@ import { LobbyPage } from '../../pages/lobby/lobby';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  user: any ={}
+  user: any = {}
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,

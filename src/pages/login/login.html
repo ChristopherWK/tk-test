@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-    <form #registerForm="ngForm" (ngSubmit)="signupForm(registerForm)" novalidate>
+    <form #registerForm="ngForm" (click)="signupForm(registerForm)" novalidate>
     <ion-item>
       <ion-label>Email</ion-label>
       <ion-input name="email" type="email" placeholder="john@doe.com" [(ngModel)]="user.email" required></ion-input>

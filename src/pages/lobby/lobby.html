@@ -9,7 +9,7 @@
   <ion-navbar color="primary" text-center>
     <ion-title>Lobby</ion-title>
     <ion-buttons end side="primary">
-      <button ion-button icon-only type="submit" (click)="logout()">
+      <button ion-button icon-only type="submit" (click)="logout()" novalidate>
         <ion-icon name="log-out"></ion-icon>
         </button>
     </ion-buttons>
@@ -19,6 +19,7 @@
 
 
 <ion-content padding>
+  
 
 <button ion-button class="button-block" (click)="takeTest()">
 Take Test

@@ -14,5 +14,13 @@ export class QuestionsProvider {
   constructor(public http: Http) {
     console.log('Hello QuestionsProvider Provider');
   }
+baseUrl: string = "http://chrisssf-cloned-phortonssf.c9users.io:8080/api"
+path: string ="/Questions"
 
+getQuestions(token){
+  console.log(token)
+    return this.http.get(
+      this.baseUrl+this.path+ '?access_token=' +token
+      );
+  }
 }

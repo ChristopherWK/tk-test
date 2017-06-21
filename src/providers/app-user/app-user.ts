@@ -29,9 +29,10 @@ login(storedUserData) {
       storedUserData
     );
   }
-  logout(token) {
+  logout(token){
     return this.http.post(
-      this.baseUrl + this.path+'/logout'+'?access_token='+token,{}
-    );
+      this.baseUrl + this.path + "/logout" +'?access_token=' + token,
+      {}
+      );
   }
 }
